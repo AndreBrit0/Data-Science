@@ -1,0 +1,14 @@
+#Logging configuration
+Logging:
+    version: 1
+    formatters:
+        etl:
+            format: "Transformer - %(asctime)s - %(levelname)s - %(message)s"
+    handlers:
+        console:
+            class: logging.StreamHandler
+            formatter: etl
+            level: DEBUG
+    root:
+        level: DEBUG
+        handlers: [console]
